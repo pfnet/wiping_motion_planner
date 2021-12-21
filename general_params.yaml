@@ -1,0 +1,60 @@
+
+
+comm:
+  bufferSize: 1024
+  server_address: !!python/tuple
+  - 127.0.0.1
+  - 20010
+  use_ROS: True
+  vrep_address: !!python/tuple
+  #- 192.168.0.81
+  - 127.0.0.1
+  - 19997
+  ros_active: false # set this option to false to skip ROS compeletely
+
+
+
+joint_limits:
+  # joint name: [min max vals (meters or radians)]
+  odom_x:    [-5,     5]   # (m)
+  odom_y:    [-5,     5]   # (m)
+  odom_theta:    [] # (empty sets cyclic joint)
+  J1:          [ ]  # (cyclic joint)
+  J2:  [0,     0.5]  # (meters)
+
+  # -------------------------
+  J3:  [-0,        0.785398]  # (rad) from Gazebo [-1.570,        2.618]
+  J4:  [0,  1.785398]  #        (rad)  from Gazebo [0,  3.141]
+  J3:  [-1.570,        2.618]  # (rad) from Gazebo [-1.570,        2.618]
+  J4:  [0,     3.141]  #        (rad)  from Gazebo [0,  3.141]
+  # -------------------------
+  J5:  [-2.82, 2.82]  # (rad)
+  J6:  [-1.570,  1.570]  # (rad)
+  J7:  [-3.14,  3.14]  # (rad)
+  migi_joint1:  [-1.57, 1.57]  # (rad)
+  migi_joint2:  [-1.57, 1.57]  # (rad)
+  migi_joint3:  [-1.57, 1.57]  # (rad)
+
+
+active_joints:
+  odom_x: true
+  odom_y: true
+  odom_theta: true
+  J1:  true
+  J2:  true
+  J3:  true
+  J4:  true
+  J5:  true
+  J6:  true
+  J7:  true
+  migi_joint1:  true
+  migi_joint2:  true
+  migi_joint3:  true
+
+
+
+
+
+
+
+

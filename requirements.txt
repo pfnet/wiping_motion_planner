@@ -1,0 +1,7 @@
+# to install required packages, run
+# pip install -r requirements.txt
+numpy
+matplotlib
+PyYAML
+argparse
+opencv-python # only used if you want to use an IDE to capture keyboard commands.

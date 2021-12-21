@@ -1,0 +1,102 @@
+
+possible_tables: ['oblong_table', 'circular_table', 'square_table']
+obstacle_footprint: circle  # 'circle' or 'blob'
+
+oblong_table:
+
+  xyzq_furniture_center: [1.70269418e+00, -7.05694139e-01,  4.00998950e-01,  7.07106802e-01, 3.63328172e-08,  2.98023195e-08,  7.07106760e-01]
+  objects: ['conferenceTable_visible0']
+
+  wipe_pattern:
+
+    long_stroke_with_circles:
+      path_start: [1.45, -0.05, .780]  # (m) position of the dummy 'dummy_path_start'
+      n_traj: 300
+      step_size: 0.14
+      amplitude: 0.5
+      circle_amplitude_x: 0.2
+      circle_amplitude_y: 0.5
+      n_circles_per_pass: 3
+      n_passes : 2
+      
+    long_stroke:
+      path_start: [1.45, -0.63, .780]  # (m) position of the dummy 'dummy_path_start'
+      n_traj: 100
+      step_size: 0.1
+      amplitude: 0.6
+      n_passes : 3
+  
+    inside_out:
+      path_start: [1.45, -0.25, .780]  # (m) position of the dummy 'dummy_path_start'
+      n_traj: 100
+      step_size: 0.16
+      amplitude: 0.5
+      n_passes : 5
+
+
+circular_table:
+  xyzq_furniture_center: [1.47399771, -0.21799995,  0.31250006,  0.68591453, -0.17181317,-0.68591671, -0.17181317]
+  objects:  ['table_circular']
+
+  wipe_pattern:
+
+    long_stroke_with_circles:
+      path_start: [1.45, -0.25, .6520]  # (m) position of the dummy 'dummy_path_start'
+      n_traj: 300
+      step_size: 0.14
+      amplitude: 0.5
+      circle_amplitude_x: 0.2
+      circle_amplitude_y: 0.5
+      n_circles_per_pass: 3
+      n_passes : 2
+
+    long_stroke:
+      path_start: [1.45, -0.5, .6520]  # (m) position of the dummy 'dummy_path_start'
+      n_traj: 100
+      step_size: 0.05
+      amplitude: 1
+      n_passes : 5
+
+    inside_out:
+      path_start: [1.65, -0.25, .6520]  # (m) position of the dummy 'dummy_path_start'
+      n_traj: 100
+      x_amp: 0.02
+      y_amp: 0.03
+      n_passes : 6
+
+square_table:
+  xyzq_furniture_center: [ 1.45, -0.2500029,  0.64756   ,  0.70710674,  0.,   0.   , -0.70710682]
+  objects:  ['customizableTable', 'customizableTable_foot']
+
+  wipe_pattern:
+
+    long_stroke_with_circles:
+      path_start: [1.45, -0.25, .70]  # (m) position of the dummy 'dummy_path_start'
+      n_traj: 300
+      step_size: 0.14
+      amplitude: 0.5
+      circle_amplitude_x: 0.2
+      circle_amplitude_y: 0.5
+      n_circles_per_pass: 3
+      n_passes : 2
+
+    long_stroke:
+      path_start: [1.45, -0.25, .70]  # (m) position of the dummy 'dummy_path_start'
+      n_traj: 100
+      step_size: 0.1
+      amplitude: 0.6
+      n_passes : 3
+
+    inside_out:
+      path_start: [1.6, -0.15, .70]  # (m) position of the dummy 'dummy_path_start'
+      n_traj: 100
+      x_amp: 0.02
+      y_amp: 0.03
+      n_passes : 6
+
+
+    # if wipe_type == 'long_stroke': n_passes = 3
+    # if wipe_type == 'long_stroke_with_circles': n_passes = 2
+    # if wipe_type == 'inside_out': n_passes = 5
+
+
